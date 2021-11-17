@@ -39,7 +39,10 @@ const SingleMissionRenderer = ({
           </p>
           {articleLink !== null ? (
             <h4>
-              For more information: <a href={articleLink}>read the article</a>{' '}
+              For more information:{' '}
+              <a href={articleLink} target='_blank' rel='noreferrer'>
+                read the article
+              </a>{' '}
               {videoLink !== null &&
                 'or watch the video provided by SpaceX down below.'}
             </h4>
