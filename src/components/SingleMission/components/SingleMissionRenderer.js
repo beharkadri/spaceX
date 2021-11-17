@@ -50,7 +50,7 @@ const SingleMissionRenderer = ({
             videoLink !== null && (
               <h4>
                 For more information watch the video provided by SpaceX down
-                below
+                below.
               </h4>
             )
           )}
