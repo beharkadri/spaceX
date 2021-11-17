@@ -3,6 +3,7 @@ import { useQuery, gql } from '@apollo/client';
 import { Grid } from '@mui/material';
 import Mission from './Mission/Mission';
 import Button from './Button/Button';
+import Loading from './Loading/Loading';
 
 const GET_ALL_MISSIONS = gql`
   query Feed($offset: Int, $limit: Int) {
@@ -26,7 +27,7 @@ const Missions = () => {
     },
   });
 
-  if (loading) return <p>Loading...</p>;
+  if (loading) return <Loading />;
   if (error) return <p>Error :(</p>;
 
   const clickHandler = () => {

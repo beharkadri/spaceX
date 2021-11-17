@@ -1,4 +1,14 @@
-.about {
-  color: white;
-  text-align: center;
+@import '../../global/styles';
+
+.contain {
+  display: flex;
+  justify-content: center;
+  .about {
+    color: white;
+    text-align: center;
+    width: 100%;
+    @include small-screen-and-more {
+      width: 60%;
+    }
+  }
 }

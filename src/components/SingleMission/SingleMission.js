@@ -2,6 +2,7 @@ import { useQuery, gql } from '@apollo/client';
 import { useLocation } from 'react-router';
 
 import Layout from '../layout/Layout';
+import Loading from '../Loading/Loading';
 import SingleMissionRenderer from './components/SingleMissionRenderer';
 
 const GET_MISSION = gql`
@@ -50,7 +51,7 @@ const SingleMission = () => {
   if (loading) {
     return (
       <Layout>
-        <p>Loading</p>
+        <Loading />
       </Layout>
     );
   }
