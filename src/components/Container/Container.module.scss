@@ -1,0 +1,28 @@
+@import '../../global/styles';
+
+.container {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 16px;
+
+  @include small-screen-and-more {
+    max-width: 640px;
+  }
+
+  @include medium-screen-and-more {
+    max-width: 768px;
+  }
+
+  @include large-screen-and-more {
+    max-width: 1024px;
+  }
+
+  @include xlarge-screen-and-more {
+    max-width: 1280px;
+  }
+
+  @include xxlarge-screen-and-more {
+    max-width: 1536px;
+  }
+}

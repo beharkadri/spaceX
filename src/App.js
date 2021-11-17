@@ -1,5 +1,7 @@
-import Launches from './components/Launches';
-import LaunchSingle from './components/LaunchSingle';
+//import Launches from './components/Launches';
+import HomePage from './Pages/HomePage/HomePage';
+import About from './Pages/About/About';
+import SingleMission from './components/SingleMission/SingleMission';
 
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 
@@ -7,12 +9,9 @@ function App() {
   return (
     <Router>
       <Switch>
-        <Route path='/missions/:id'>
-          <LaunchSingle />
-        </Route>
-        <Route path='/'>
-          <Launches />
-        </Route>
+        <Route exact path='/' component={HomePage} />
+        <Route exact path='/about' component={About} />
+        <Route path='/missions/:id' component={SingleMission} />
       </Switch>
     </Router>
   );

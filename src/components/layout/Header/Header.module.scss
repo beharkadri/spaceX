@@ -1,0 +1,44 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 2px solid white;
+  color: white;
+  margin-bottom: 40px;
+  a {
+    color: white;
+    text-decoration: none;
+  }
+  nav {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    color: white;
+    a {
+      color: white;
+      position: relative;
+      &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 14px;
+        left: 0;
+        right: 0;
+        border-bottom: 1px solid white;
+        transition: all 0.3s ease-in-out;
+        transform: scaleX(0);
+      }
+      &:hover {
+        color: white;
+        &:before {
+          transform: scaleX(1);
+        }
+      }
+      &.active {
+        color: white;
+        &:before {
+          transform: scaleX(1);
+        }
+      }
+    }
+  }
+}
